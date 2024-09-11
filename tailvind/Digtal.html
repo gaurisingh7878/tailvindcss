@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Marketing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .card {
+        position: relative;
+        width: 190px;
+        height: 260px;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        left: -5px;
+        margin: auto;
+        width: 200px;
+        height: 264px;
+        border-radius: 10px;
+        background: linear-gradient(-45deg, red 0%, yellow 100%);
+        z-index: -10;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .card::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(-45deg, red 0%, yellow 100%);
+        transform: translate3d(0, 0, 0) scale(0.95);
+        filter: blur(20px);
+      }
+
+      .heading {
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+
+      .card p:not(.heading) {
+        font-size: 14px;
+      }
+
+      .card p:last-child {
+        color: #e81cff;
+        font-weight: 600;
+      }
+
+      .card:hover::after {
+        filter: blur(30px);
+      }
+
+      .card:hover::before {
+        transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+      }
+
+      button {
+        background-color: #fff;
+        border: 1px solid #25d366;
+        padding: 5px;
+        position: relative;
+        width: 6.6em;
+        height: 2.4em;
+        transition: 0.5s;
+        align-items: center;
+        font-size: 17px;
+        border-radius: 0.4em;
+      }
+
+      button p {
+        position: absolute;
+        top: 0.4em;
+        left: 1.15em;
+        margin: 0;
+        padding: 0;
+        transition: 0.5s;
+        color: #25d366;
+      }
+
+      button svg {
+        position: absolute;
+        top: 0.45em;
+        right: 0.5em;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        transition: 0.5s;
+        height: 1em;
+        fill: #fff;
+      }
+
+      button:hover p {
+        left: 0.5em;
+        color: #fff;
+      }
+
+      button:hover svg {
+        opacity: 1;
+      }
+
+      button:hover {
+        background-color: #25d366;
+      }
+    </style>
+  </head>
+  <body
+    class="select-none bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%"
+  >
+    <div
+      class="flex justify-between items-center flex-row p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+    >
+      <div>
+        <ul class="text-white">
+          <li>
+            <button
+              class="h-12 w-40 bg-red-300 hover:bg-red-500 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:text-white shadow-white transform transition-all duration-500 ease-in-out hover:scale-110 hover:brightness-110 hover:animate-pulse active:animate-bounce"
+            >
+              Vishal.com
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <ul class="flex flex-row gap-20 text-white font-bold">
+          <li>HOME</li>
+          <li>SERVICES</li>
+          <li>TEAM</li>
+          <li>FEEDBACK</li>
+          <li>CONTACT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <div
+        class="bg-[url('https://images.pexels.com/photos/8190804/pexels-photo-8190804.jpeg')] bg-no-repeat bg-cover object-cover"
+      >
+        <div class="flex justify-center p-40">
+          <div
+            class="text-black flex flex-col gap-10 items-center mr-28 -mt-20"
+          >
+            <span class="font-bold text-2xl">We Are Creative</span>
+            <span class="text-4xl font-normal">Digital Marketing Agency</span>
+            <span class="font-bold text-2xl"
+              >We Turn Your Ideas into Reality</span
+            >
+            <span>
+              <div class="relative group">
+                <div
+                  class="relative w-52 h-14 opacity-90 overflow-hidden rounded-xl bg-black z-10"
+                >
+                  <div
+                    class="absolute z-10 -translate-x-44 group-hover:translate-x-[30rem] ease-in transistion-all duration-700 h-full w-44 bg-gradient-to-r from-gray-500 to-white/10 opacity-30 -skew-x-12"
+                  ></div>
+
+                  <div
+                    class="absolute flex items-center justify-center text-white z-[1] opacity-90 rounded-2xl inset-0.5 bg-black"
+                  >
+                    <button
+                      name="text"
+                      class="input font-semibold text-lg h-full opacity-90 w-full rounded-xl bg-black"
+                    >
+                      Digital Marketing
+                    </button>
+                  </div>
+                  <div
+                    class="absolute duration-1000 group-hover:animate-spin w-full h-[100px] bg-gradient-to-r from-green-500 to-yellow-500 blur-[30px]"
+                  ></div>
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="bg-[url('https://img.freepik.com/premium-photo/hand-holding-virtual-glowing-blue-circle-surrounded-by-education-icons_982248-4963.jpg?w=1060')] bg-no-repeat bg-cover "> -->
+
+      <!-- <div class="flex flex-col md:flex-row"> -->
+
+      <div class="flex justify-center">
+        <div class="flex flex-col gap-3 items-center">
+          <span class="text-3xl font-normal text-white"
+            >Welcome to Our Digital Marketing Agency.</span
+          >
+          <span class="text-3xl font-normal text-white"
+            >Who We Are And What Can We do?</span
+          >
+          <span class="text-white"
+            >We are a Digital Marketing Agency Offering Graphic Design, Video
+            Editing, Website Development, Content Writing, Voice Over, and
+            Social Media Marketing Services.</span
+          >
+        </div>
+      </div>
+
+      <div class="flex flex-row justify-center p-2 gap-14">
+        <div class="card flex justify-center items-center">
+          <div class="flex justify-center text-white mt-4">
+            <span class="text-purple-950"><i class="fa-solid fa-image text-3xl"></i></span>
+          </div>
+          <p class="heading text-white">Graphic Design</p>
+          <p class="text-white">
+            Our Graphic Design Services elevate brands with visually stunning
+            designs. Our talented team works with you to bring ideas to life and
+            create a consistent brand image.
+          </p>
+          <p></p>
+        </div>
+
+        <div class="card flex justify-center items-center">
+         <div class="flex justify-center text-white mt-4">
+          <span class="text-purple-950"><i class="fa-solid fa-laptop text-3xl"></i></span>
+         </div>
+          <p class="heading text-white">Website Design</p>
+          <p class="text-white">
+            Our Website Development Services create a custom online presence for
+            your brand. Our experts provide functional, fast and visually
+            appealing websites.
+          </p>
+          <p></p>
+        </div>
+
+        <div class="card flex justify-center items-center">
+         
+          <div class="flex justify-center text-white mt-4 ">
+          <span class="text-purple-950"><i class="fa-solid fa-camera text-3xl"></i></span>
+         </div>
+          <p class="heading text-white">Video Editing</p>
+          <p class="text-white">
+            Our Video Editing Services bring your vision to life. Our team of
+            professionals use the latest editing software and techniques to
+            create captivating, high-quality videos
+          </p>
+          <p></p>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="flex gap-16 justify-center items-center">
+        <div class="card flex justify-center">
+          <div  class="flex justify-center text-white mt-4">
+            <span class="text-purple-950"><i class="fa-solid fa-pen text-3xl"></i></span>
+          </div>
+          <p class="heading text-white">Content Writing</p>
+          <p class="text-white">
+            Our Content Writing Services craft compelling, SEO-friendly content.
+            Our expert writers create blog posts, articles, and more to inform,
+            educate and drive traffic.
+          </p>
+          <p></p>
+        </div>
+
+        <div class="card flex justify-center  items-center">
+          <div  class="flex justify-center text-white ">
+            <span class="text-purple-950"><i class="fa-solid fa-microphone text-3xl"></i></span>
+          </div>
+          <p class="heading text-white">Voice Over</p>
+          <p class="text-white">
+            Our Voice Over Services bring your audio projects to life. Our
+            talented voice actors deliver a wide range of styles and accents to
+            match your needs.
+          </p>
+          <p></p>
+        </div>
+
+        <div class="card flex justify-center items-center">
+          <div  class="flex justify-center text-white mt-4">
+            <span class="text-purple-950"><i class="fa-solid fa-share text-3xl"></i></span>
+          </div>
+          <p class="heading text-white">Social Media</p>
+          <p class="text-white">
+            Our Social Media Marketing Services help you reach your target
+            audience and grow your brand. Our experts create custom strategies
+            to engage and drive results.
+          </p>
+          <p></p>
+        </div>
+      </div>
+    </div><br>
+
+    <div class="bg-orange-400">
+      <div class="flex flex-col justify-center items-center">
+        <span class="text-3xl font-normal text-white p-4">Creative Team</span>
+        <span class="w-[44rem] text-white"
+          >Our Creative Team specializes in bringing your ideas to life. With
+          expertise in design and a passion for innovation, our team will turn
+          your vision into a reality. Contact us for all your creative
+          needs.</span
+        >
+      </div>
+
+      <div class="p-20 flex justify-center gap-6">
+        <div class="w-72 bg-white rounded-xl scale-100 hover:scale-[1.02]">
+          <img
+            src="https://th.bing.com/th/id/OIP.0ZM7e1Z_zmebcBILunvbHQHaEn?w=308&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt=""
+            class=""
+          />
+          <h2 class="flex justify-center font-bold">VISHAL SINGH</h2>
+          <h1 class="flex justify-center font-semibold">SOFTWARE DEVELOPER</h1>
+          <p
+            class="flex justify-center items-center text-1xl flex-col ml-6 p-2"
+          >
+            He is a highly skilled graphic designer, crafting visually stunning
+            designs for clients.
+          </p>
+          <div class="ml-[5rem]">
+            <a href="https://wa.me/9024829739"
+              ><button>
+                <p>whatsapp</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                  ></path>
+                </svg></button
+            ></a>
+          </div>
+        </div>
+
+        <div class="w-72 bg-white rounded-xl scale-100 hover:scale-[1.02]">
+          <img
+            src="https://th.bing.com/th/id/OIP.0ZM7e1Z_zmebcBILunvbHQHaEn?w=308&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt=""
+          />
+          <h2 class="flex justify-center font-bold">VISHAL SINGH</h2>
+          <h1 class="flex justify-center font-semibold">SOFTWARE DEVELOPER</h1>
+          <p
+            class="flex justify-center items-center text-1xl ml-6 flex-col p-2"
+          >
+            He is a highly skilled graphic designer, crafting visually stunning
+            designs for clients.
+          </p>
+
+          <div class="ml-[5rem]">
+            <a href="https://wa.me/9024829739"
+              ><button>
+                <p>whatsapp</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                  ></path>
+                </svg></button
+            ></a>
+          </div>
+        </div>
+
+        <div
+          class="w-72 bg-white rounded-xl scale-100 hover:scale-[1.02] shadow-2xl"
+        >
+          <img
+            src="https://th.bing.com/th/id/OIP.0ZM7e1Z_zmebcBILunvbHQHaEn?w=308&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt=""
+          />
+          <h2 class="flex justify-center font-bold">VISHAL SINGH</h2>
+          <h1 class="flex justify-center font-semibold">SOFTWARE DEVELOPER</h1>
+          <p
+            class="flex justify-center items-center text-1xl p-2 flex-col ml-6"
+          >
+            He is a highly skilled graphic designer, crafting visually stunning
+            designs for clients.
+          </p>
+          <div class="ml-[5rem]">
+            <a href="https://wa.me/9024829739"
+              ><button>
+                <p>whatsapp</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-whatsapp"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+                  ></path>
+                </svg></button
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="bg-[url('https://www.bandt.com.au/information/uploads/2016/06/what-is-digital-marketing.jpg')] bg-cover"
+    >
+      <div class="flex justify-center gap-40 items-center">
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-col gap-8">
+            <span class="text-5xl font-semibold text-black"
+              >Lets Get In Touch</span
+            >
+            <span class="text-1xl w-[40rem] text-black"
+              >Contact Us Today for Graphic Design, Video Editing, Website
+              Development, Content Writing, Voice Over, and Social Media
+              Marketing Services.</span
+            >
+          </div>
+
+          <div class="flex gap-2">
+            <span class="text-blue-600"
+              ><i class="fa-solid fa-location-dot text-3xl"></i
+            ></span>
+            <span class="text-1xl font-semibold text-black"
+              >Rajasthan Alwar</span
+            >
+          </div>
+
+          <div class="flex gap-2">
+            <span class="text-blue-600"
+              ><i class="fa-solid fa-phone text-3xl"></i
+            ></span>
+            <span class="font-semibold text-black"> +91 90248 29739</span>
+          </div>
+
+          <div class="flex gap-2">
+            <span class="text-blue-600"
+              ><i class="fa-solid fa-earth-asia text-3xl"></i
+            ></span>
+            <span class="font-semibold text-black"
+              >officialdigitalkarobar@gamil.com</span
+            >
+          </div>
+        </div>
+
+        <div>
+          <div class="flex flex-col items-center justify-center h-screen dark">
+            <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-md p-6">
+              <h2 class="text-2xl font-bold text-gray-200 mb-4">
+                Digital Marketing
+              </h2>
+
+              <form class="flex flex-col w-72">
+                <input
+                  placeholder="Full Name"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  type="text"
+                />
+                <input
+                  placeholder="Email"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  type="email"
+                />
+                <input
+                  placeholder="Phone Number"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  type="text"
+                />
+                <input
+                  placeholder="Subject"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  type="text"
+                />
+                <textarea
+                  placeholder="Message"
+                  class="bg-gray-700 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                  name="Message"
+                ></textarea>
+
+                <div class="flex justify-center">
+                  <button
+                    class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold w-26 h-10 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 text-2xl"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
